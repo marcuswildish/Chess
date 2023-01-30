@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaChess.ChessController">
+   <center>
+      <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="textfield" layoutX="138.0" layoutY="410.0" text="White to move">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="412.0" layoutY="61.0" prefHeight="315.0" prefWidth="188.0">
+               <content>
+                <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="188.0">
+                     <children>
+                        <VBox fx:id="VBox1" layoutX="83.0" prefHeight="394.0" prefWidth="91.0" />
+                        <VBox fx:id="VBox2" layoutX="7.0" prefHeight="394.0" prefWidth="94.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="481.0" layoutY="30.0" prefHeight="17.0" prefWidth="50.0" text="Moves" textAlignment="CENTER" />
+            <Button layoutX="135.0" layoutY="459.0" mnemonicParsing="false" onAction="#writeToFile" prefHeight="27.0" prefWidth="128.0" text="Export game to file" />
+            <Label fx:id="errorText" layoutX="140.0" layoutY="436.0" text="" />
+         </children></Pane>
+   </center>
+</BorderPane>
